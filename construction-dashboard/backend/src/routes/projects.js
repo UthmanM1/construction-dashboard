@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const c = require('../controllers/projectsController');
+const { authenticate, requireRole } = require('../middleware/auth');
+router.use(authenticate);
+router.get('/', c.getAll);
+router.get('/:id', c.getOne);
+router.post('/', requireRole('manager', 'admin'), c.create);
+router.put('/:id', requireRole('manager', 'admin'), c.update);
+router.get('/:id/history', c.getHistory);
+module.exports = router;

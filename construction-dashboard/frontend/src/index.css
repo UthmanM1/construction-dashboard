@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+}
+
+.display-font {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.stat-card {
+  @apply bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-colors;
+}
+
+.badge-critical { @apply bg-red-900/40 text-red-400 border border-red-800; }
+.badge-warning  { @apply bg-yellow-900/40 text-yellow-400 border border-yellow-800; }
+.badge-info     { @apply bg-blue-900/40 text-blue-400 border border-blue-800; }
+.badge-ok       { @apply bg-green-900/40 text-green-400 border border-green-800; }
